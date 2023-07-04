@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pilates Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--  || Header -->
+    <header>
+      <input type="checkbox" class="nav-toggler" id="nav-toggler" />
+      <label for="nav-toggler" class="nav-toggler-label"><span></span></label>
+      <a href="index.html"
+        ><img class="desktop logo" src="resources/PILATES-logo.svg" alt="Logo"
+      /></a>
+      <nav>
+        <ul class="navbar">
+          <li><a href="#about">About</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#timetable">Timetable</a></li>
+          <li><a href="#studios">Studios</a></li>
+          <li><a href="#classes">classes</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!--  || Hero Section-->
+    <section id="hero">
+      <div class="hero-content">
+        <h1>A class for every<strong>body</strong></h1>
+        <p>
+          From high-intensity to recovery and mobility, Club Pilates classes are
+          low-impact, fun and effective.
+        </p>
+      </div>
+    </section>
+    <!--  || About Section -->
+    <section id="about">
+      <div class="about-content">
+        <h4>About</h4>
+        <h2>The Pilates Experience</h2>
+        <p>
+          Pilates is a contemporary pilates studio offering professional
+          instruction to those seeking balance of mind and body
+        </p>
+        <div>
+          <div class="about-div">
+            <h3>Do Pilates to move better</h3>
+            <p>
+              To bend without breaking. To grow through changes and adjust
+              easily in whichever direction life goes
+            </p>
+            <img src="resources/move.png" alt="woman doing pilates" />
+          </div>
+          <div class="about-div">
+            <h3>Do Pilates to feel better</h3>
+            <p>
+              To stand tall with confidence. To create space for mental clarity
+              and focus
+            </p>
+            <img src="resources/feel.png" alt="woman on park" />
+          </div>
+          <div class="about-div">
+            <h3>Do Pilates to live better</h3>
+            <p>
+              To shine with gratitude and empowerment. To get more out of your
+              days and ultimately your life
+            </p>
+            <img src="resources/live.png" alt="woman meditating" />
+          </div>
+          <img
+            class="mobile"
+            src="resources/pilates-experience.png"
+            alt="woman enjoying pilates"
+          />
+        </div>
+      </div>
+    </section>
+    <!--  || Find your balance -->
+    <div class="banner"><span>FIND YOUR BALANCE</span></div>
+    <!--  || News Blog Section -->
+    <section id="news">
+      <div class="news-content">
+        <h2>Articles & News</h2>
+        <article>
+          <h6>June 15, 2023</h6>
+          <h3>
+            What Role Can Pilates Play in Rehabilitation and Physical Therapy?
+          </h3>
+          <p>
+            Health and exercise enthusiasts have long been turning to pilates
+            for a fun, whole-body workout that benefits both the brain and the
+            body.
+          </p>
+          <button type="button">Read more</button>
+        </article>
+        <article>
+          <h6>June 14, 2023</h6>
+          <h3>Difference Between Beginner and Intermediate Pilates?</h3>
+          <p>
+            The level of pilates class you sign up for shouldn’t correspond to
+            how often you work out or how athletic you are.
+          </p>
+          <button type="button">Read more</button>
+        </article>
+        <article>
+          <h6>June 13, 2023</h6>
+          <h3>Types of Pilates Machines</h3>
+          <p>
+            Pilates machines are pieces of exercise equipment designed by Joseph
+            Pilates specifically to be used with the Pilates Method.
+          </p>
+          <button type="button">Read more</button>
+        </article>
+      </div>
+    </section>
+
+    <!--  || Timetable schedule Section -->
+    <section id="timetable">
+      <h3>Time table</h3>
+      <h2>Working Schedule</h2>
+      <ul class="timetable">
+        <li>
+          <input type="radio" name="tab" id="tab1" checked />
+          <label for="tab1">Monday</label>
+          <div id="tab-monday" class="tab-content">
+            <table class="table responsive">
+              <thead>
+                <tr>
+                  <td>Time</td>
+                  <td>Class</td>
+                  <td>Trainer</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Time">6:00 - 7:00</td>
+                  <td data-label="Class">Align</td>
+                  <td data-label="Trainer">Cynthia Bertram</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">7:00 - 8:00</td>
+                  <td data-label="Class">Align</td>
+                  <td data-label="Trainer">Megan Stone</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">8:00 - 9:00</td>
+                  <td data-label="Class">Evolve</td>
+                  <td data-label="Trainer">Cynthia Bertram</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">9:00 - 10:00</td>
+                  <td data-label="Class">Evolve</td>
+                  <td data-label="Trainer">Megan Stone</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">4:00 - 5:00</td>
+                  <td data-label="Class">Define</td>
+                  <td data-label="Trainer">Ebany Brebner</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">5:00 - 6:00</td>
+                  <td data-label="Class">Define</td>
+                  <td data-label="Trainer">Nicole Norris</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">6:00 - 7:00</td>
+                  <td data-label="Class">Uplift</td>
+                  <td data-label="Trainer">Ebany Brebner</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">7:00 - 8:00</td>
+                  <td data-label="Class">Uplift</td>
+                  <td data-label="Trainer">Nicole Norris</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="tab" id="tab2" />
+          <label for="tab2">Tuesday</label>
+          <div id="tab-tuesday" class="tab-content">
+            <table class="table responsive">
+              <thead>
+                <tr>
+                  <td>Time</td>
+                  <td>Class</td>
+                  <td>Trainer</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Time">6:00 - 7:00</td>
+                  <td data-label="Class">Uplift</td>
+                  <td data-label="Trainer">Nicole Norris</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">7:00 - 8:00</td>
+                  <td data-label="Class">Align</td>
+                  <td data-label="Trainer">Cynthia Bertram</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">8:00 - 9:00</td>
+                  <td data-label="Class">Uplift</td>
+                  <td data-label="Trainer">Nicole Norris</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">9:00 - 10:00</td>
+                  <td data-label="Class">Evolve</td>
+                  <td data-label="Trainer">Cynthia Bertram</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">4:00 - 5:00</td>
+                  <td data-label="Class">Move</td>
+                  <td data-label="Trainer">Megan Stone</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">5:00 - 6:00</td>
+                  <td data-label="Class">Move</td>
+                  <td data-label="Trainer">Ebany Brebner</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">6:00 - 7:00</td>
+                  <td data-label="Class">Evolve</td>
+                  <td data-label="Trainer">Megan Stone</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">7:00 - 8:00</td>
+                  <td data-label="Class">Suspend</td>
+                  <td data-label="Trainer">Ebany Brebner</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="tab" id="tab3" />
+          <label for="tab3">Wednesday</label>
+          <div id="tab-wednesday" class="tab-content">
+            <table class="table responsive">
+              <thead>
+                <tr>
+                  <td>Time</td>
+                  <td>Class</td>
+                  <td>Trainer</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Time">6:00 - 7:00</td>
+                  <td data-label="Class">Align</td>
+                  <td data-label="Trainer">Cynthia Bertram</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">7:00 - 8:00</td>
+                  <td data-label="Class">Align</td>
+                  <td data-label="Trainer">Cynthia Bertram</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">8:00 - 9:00</td>
+                  <td data-label="Class">Evolve</td>
+                  <td data-label="Trainer">Megan Stone</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">9:00 - 10:00</td>
+                  <td data-label="Class">Define</td>
+                  <td data-label="Trainer">Ebany Brebner</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">4:00 - 5:00</td>
+                  <td data-label="Class">Restore</td>
+                  <td data-label="Trainer">Megan Stone</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">5:00 - 6:00</td>
+                  <td data-label="Class">Restore</td>
+                  <td data-label="Trainer">Ebany Brebner</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">6:00 - 7:00</td>
+                  <td data-label="Class">Uplift</td>
+                  <td data-label="Trainer">Megan Stone</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">7:00 - 8:00</td>
+                  <td data-label="Class">Uplift</td>
+                  <td data-label="Trainer">Nicole Norris</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="tab" id="tab4" />
+          <label for="tab4">Thursday</label>
+          <div id="tab-thusday" class="tab-content">
+            <table class="table responsive">
+              <thead>
+                <tr>
+                  <td>Time</td>
+                  <td>Class</td>
+                  <td>Trainer</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Time">6:00 - 7:00</td>
+                  <td data-label="Class">Uplift</td>
+                  <td data-label="Trainer">Ebany Brebner</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">7:00 - 8:00</td>
+                  <td data-label="Class">Align</td>
+                  <td data-label="Trainer">Ebany Brebner</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">8:00 - 9:00</td>
+                  <td data-label="Class">Uplift</td>
+                  <td data-label="Trainer">Cynthia Bertram</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">9:00 - 10:00</td>
+                  <td data-label="Class">Uplift</td>
+                  <td data-label="Trainer">Cynthia Bertram</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">4:00 - 5:00</td>
+                  <td data-label="Class">Move</td>
+                  <td data-label="Trainer">Megan Stone</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">5:00 - 6:00</td>
+                  <td data-label="Class">Move</td>
+                  <td data-label="Trainer">Nicole Norris</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">6:00 - 7:00</td>
+                  <td data-label="Class">Evolve</td>
+                  <td data-label="Trainer">Megan Stone</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">7:00 - 8:00</td>
+                  <td data-label="Class">Evolve</td>
+                  <td data-label="Trainer">Nicole Norris</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="tab" id="tab5" />
+          <label for="tab5">Friday</label>
+          <div id="tab-friday" class="tab-content">
+            <table class="table responsive">
+              <thead>
+                <tr>
+                  <td>Time</td>
+                  <td>Class</td>
+                  <td>Trainer</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Time">6:00 - 7:00</td>
+                  <td data-label="Class">Suspend</td>
+                  <td data-label="Trainer">Nicole Norris</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">7:00 - 8:00</td>
+                  <td data-label="Class">Suspend</td>
+                  <td data-label="Trainer">Cynthia Bertram</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">8:00 - 9:00</td>
+                  <td data-label="Class">Define</td>
+                  <td data-label="Trainer">Cynthia Bertram</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">9:00 - 10:00</td>
+                  <td data-label="Class">Define</td>
+                  <td data-label="Trainer">Megan Stone</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">4:00 - 5:00</td>
+                  <td data-label="Class">Align</td>
+                  <td data-label="Trainer">Ebany Brebner</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">5:00 - 6:00</td>
+                  <td data-label="Class">Align</td>
+                  <td data-label="Trainer">Megan Stone</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">6:00 - 7:00</td>
+                  <td data-label="Class">Move</td>
+                  <td data-label="Trainer">Ebany Brebner</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">7:00 - 8:00</td>
+                  <td data-label="Class">Move</td>
+                  <td data-label="Trainer">Nicole Norris</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="tab" id="tab6" />
+          <label for="tab6">Saturday</label>
+          <div id="tab-saturday" class="tab-content">
+            <table class="table responsive">
+              <thead>
+                <tr>
+                  <td>Time</td>
+                  <td>Class</td>
+                  <td>Trainer</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Time">6:00 - 7:00</td>
+                  <td data-label="Class">Uplift</td>
+                  <td data-label="Trainer">Ebany Brebner</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">7:00 - 8:00</td>
+                  <td data-label="Class">Evolve</td>
+                  <td data-label="Trainer">Ebany Brebner</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">8:00 - 9:00</td>
+                  <td data-label="Class">Move</td>
+                  <td data-label="Trainer">Cynthia Bertram</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">9:00 - 10:00</td>
+                  <td data-label="Class">Define</td>
+                  <td data-label="Trainer">Nicole Norris</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">4:00 - 5:00</td>
+                  <td data-label="Class">Restore</td>
+                  <td data-label="Trainer">Cynthia Bertram</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">5:00 - 6:00</td>
+                  <td data-label="Class">Move</td>
+                  <td data-label="Trainer">Nicole Norris</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">6:00 - 7:00</td>
+                  <td data-label="Class">Define</td>
+                  <td data-label="Trainer">Nicole Norris</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">7:00 - 8:00</td>
+                  <td data-label="Class">Uplift</td>
+                  <td data-label="Trainer">Nicole Norris</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+        <li>
+          <input type="radio" name="tab" id="tab7" />
+          <label for="tab7">Sunday</label>
+          <div id="tab-sunday" class="tab-content">
+            <table class="table">
+              <thead>
+                <tr>
+                  <td>Time</td>
+                  <td>Class</td>
+                  <td>Trainer</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Time">6:00 - 7:00</td>
+                  <td data-label="Class">Evolve</td>
+                  <td data-label="Trainer">Megan Stone</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">7:00 - 8:00</td>
+                  <td data-label="Class">Evolve</td>
+                  <td data-label="Trainer">Megan Stone</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">8:00 - 9:00</td>
+                  <td data-label="Class">Align</td>
+                  <td data-label="Trainer">Cynthia Bertram</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">9:00 - 10:00</td>
+                  <td data-label="Class">Align</td>
+                  <td data-label="Trainer">Cynthia Bertram</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">4:00 - 5:00</td>
+                  <td data-label="Class">Uplift</td>
+                  <td data-label="Trainer">Ebany Brebner</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">5:00 - 6:00</td>
+                  <td data-label="Class">Uplift</td>
+                  <td data-label="Trainer">Ebany Brebner</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">6:00 - 7:00</td>
+                  <td data-label="Class">Restore</td>
+                  <td data-label="Trainer">Cynthia Bertram</td>
+                </tr>
+                <tr>
+                  <td data-label="Time">7:00 - 8:00</td>
+                  <td data-label="Class">Restore</td>
+                  <td data-label="Trainer">Cynthia Bertram</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <!--  || Studios Section -->
+    <section id="studios">
+      <h3>Our studios</h3>
+      <h2>Book your mindful burn</h2>
+      <div>
+        <span>New City</span>
+        <p>+1 (786) 423-1234</p>
+        <p>857 Blackwell Street</p>
+      </div>
+      <div>
+        <span>Square Tree</span>
+        <p>+1 (786) 238-1234</p>
+        <p>164 Scenicview Drive</p>
+      </div>
+      <div>
+        <span>Second Avenue</span>
+        <p>+1 (786) 678-1234</p>
+        <p>2062 Bond Street</p>
+      </div>
+      <p>
+        Try your first intro class FREE! Select a studio near you to experience
+        Club Pilates, on us!
+      </p>
+    </section>
+    <!--  || Classes Section -->
+    <section id="classes">
+      <h3>our classes</h3>
+      <h2>Signature Classes</h2>
+      <p>
+        Our expert instructors have all of the tools to help you reach your
+        fitness goals.
+      </p>
+      <div>
+        <h6>Intro Class</h6>
+        <p>Introduce Your Body to Pilates for Free!</p>
+      </div>
+      <div>
+        <h6>Reformer Flow</h6>
+        <p>Reformer-based Pilates with a Contemporary Approach</p>
+      </div>
+      <div>
+        <h6>Cardio Sculpt</h6>
+        <p>Get Moving with an Energetic Cardio Workout</p>
+      </div>
+      <div>
+        <h6>Center + Balance</h6>
+        <p>Stretch Better with Pilates Equipment</p>
+      </div>
+      <div>
+        <h6>Control</h6>
+        <p>Stand Up & Get Toned</p>
+      </div>
+      <div>
+        <h6>Restore</h6>
+        <p>Massage and Soothe Sore Muscles</p>
+      </div>
+      <div>
+        <h6>Prenatal Reformer</h6>
+        <p>Safe and suitable for women at all stages of pregnancy</p>
+      </div>
+    </section>
+
+    <!--  || Contact Section -->
+    <section id="contact">
+      <h3>WELCOME TO pilates</h3>
+      <h2>Get In Touch With Us</h2>
+      <p>
+        If you have any feedback or questions about our clubs, our website or
+        our services in general, please contact us by filling out the form.
+      </p>
+      <h5>Open Hours</h5>
+      <p><strong>Mon Fri :</strong> 06.00 A.M. to 09.00 P.M</p>
+      <p><strong>Sat</strong> 06.00 A.M. to 06.00 P.M</p>
+      <p><strong>sunday :</strong> 06.00 A.M. to 02.00 P.M</p>
+      <form></form>
+    </section>
+
+    <!--  || Footer -->
+    <div>
+      <img src="resources/PILATES-logo.svg" alt="Logo" />
+      <p>For learning purposes only</p>
+      <p>Call :</p>
+      <p>+1 (786) 423-1234</p>
+      <p>Mail :</p>
+      <p>contact@pilates.com</p>
+    </div>
+    <div>
+      <h5>Newsletter</h5>
+      <input type="email" />
+      <button type="button">Subscribe</button>
+    </div>
+    <div>
+      <img src="resources/Instagram.svg" alt="Instagram" />
+      <img src="resources/Fb.svg" alt="Facebook" />
+      <img src="resources/Twiter.svg" alt="Twitter" />
+    </div>
+  </body>
+</html>

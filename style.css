@@ -1,0 +1,447 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --purple-pilates: #524ff5;
+  --gray-pilates: #6a6a6a;
+  --beige-pilates: #f0f0f0;
+  --yellow-pilates: #f2f54f;
+  --black-pilates: #1b2129;
+}
+
+html {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+/* || General styles */
+/* || Utilities */
+
+.mobile {
+  display: none;
+}
+/* || Typography */
+
+h1 {
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 3rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  color: var(--purple-pilates);
+  font-size: 1rem;
+  line-height: 1rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+h6 {
+  color: var(--purple-pilates);
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+/* || Header and Main Navigation */
+header {
+  background-color: white;
+  padding: 1rem 0;
+  position: fixed;
+  z-index: 3;
+  width: 100vw;
+  height: 4rem;
+}
+
+header .logo {
+  width: 10rem;
+  margin-left: 1rem;
+}
+
+header a {
+  align-self: center;
+}
+
+nav {
+  position: absolute;
+  top: 3rem;
+  transform: scale(1, 0);
+  transform-origin: top;
+  width: 100vw;
+  padding: 3rem;
+  background-color: white;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--black-pilates);
+  font-weight: 500;
+  font-size: 1.5rem;
+  opacity: 0;
+  color: rgba(51, 51, 51, 0.5);
+  font-size: 1.2rem;
+}
+
+nav a:hover,
+nav a:focus,
+nav a:active {
+  color: var(--black-pilates);
+}
+
+nav li {
+  margin: 1rem 0;
+  list-style: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.nav-toggler {
+  display: none;
+}
+
+.nav-toggler-label {
+  position: absolute;
+  top: 0.5rem;
+  right: 0;
+  display: flex;
+  margin-right: 1.5rem;
+  align-items: center;
+  height: 3rem;
+  z-index: 20;
+}
+
+.nav-toggler-label span,
+.nav-toggler-label span::before,
+.nav-toggler-label span::after {
+  display: block;
+  background: var(--black-pilates);
+  width: 1rem;
+  height: 2px;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggler-label span::before,
+.nav-toggler-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggler-label span::before {
+  bottom: 0.4rem;
+}
+
+.nav-toggler-label span::after {
+  top: 0.4rem;
+}
+
+.nav-toggler:checked ~ nav {
+  transform: scale(1, 1);
+  transition: transform 100ms ease;
+}
+
+.nav-toggler:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 100ms ease 150ms;
+}
+
+.nav-toggler:checked ~ .nav-toggler-label span::before {
+  display: none;
+}
+
+.nav-toggler:checked ~ .nav-toggler-label span::after {
+  transform: translate(0, -0.4rem) rotate(90deg);
+}
+
+.nav-toggler:checked ~ .nav-toggler-label span {
+  transform: rotate(135deg);
+}
+
+/* || Hero */
+
+#hero {
+  height: 90vh;
+  background: rgba(7, 7, 7, 0.3) center/cover url(resources/pilates.jpg);
+  display: flex;
+  box-shadow: inset 0 0 0 1000px rgba(7, 7, 7, 0.3);
+}
+
+.hero-content {
+  color: white;
+  text-align: center;
+  align-self: center;
+  margin: 2rem;
+}
+
+/* || About Section */
+
+#about {
+  background: no-repeat top right/cover url(resources/about.png);
+  background-size: 70%;
+  margin-top: 1rem;
+}
+
+.about-content {
+  padding: 2rem;
+}
+
+.about-div {
+  background-color: var(--beige-pilates);
+  margin: 2rem 0;
+  padding: 2rem 1rem 1rem;
+}
+.about-div p {
+  color: var(--gray-pilates);
+  margin-top: 1rem;
+}
+.about-div img {
+  width: 100%;
+  margin-top: 1rem;
+}
+/* || Find your balance */
+
+.banner {
+  background-color: var(--black-pilates);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* || News Blog Section  */
+
+#news {
+  background: no-repeat top right/cover url(resources/news.png);
+  background-size: 70%;
+  margin-top: 1rem;
+}
+
+.news-content {
+  padding: 2rem;
+}
+
+article {
+  background-color: var(--beige-pilates);
+  margin: 2rem 0;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+article button {
+  padding: 1rem;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: var(--black-pilates);
+  font-size: 1rem;
+  border: 1px solid #bababa;
+  background-color: var(--beige-pilates);
+}
+
+article button:hover,
+button:focus,
+button:active {
+  background-color: var(--yellow-pilates);
+  border: 1px solid var(--yellow-pilates);
+}
+
+/* || Timetable schedule Section */
+#timetable {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--black-pilates);
+  /* width: 100%; */
+  padding: 5rem 0;
+}
+
+#timetable h3,
+#timetable h2 {
+  color: var(--beige-pilates);
+}
+
+.timetable {
+  width: 100%;
+  list-style: none;
+  position: relative;
+  color: var(--beige-pilates);
+  /* min-height: 50vh; */
+  top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.timetable li {
+  width: 100%;
+  justify-content: center;
+  /* float: left; */
+  display: flex;
+  /* flex-direction: row; */
+  /* display: block; */
+}
+
+input[type="radio"] {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+}
+
+.timetable label {
+  display: block;
+  padding: 0.2rem;
+
+  font-size: 1.3rem;
+  background: var(--black-pilates);
+  color: var(--beige-pilates);
+  cursor: pointer;
+  /* position: relative; */
+}
+
+.timetable label:hover {
+  color: var(--yellow-pilates);
+}
+
+.tab-content {
+  /* z-index: 2; */
+  display: none;
+  /* overflow: hidden; */
+  width: 100%;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  padding: 2rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--black-pilates);
+}
+
+[id^="tab"]:checked + label {
+  top: 0;
+  background: var(--black-pilates);
+  color: var(--yellow-pilates);
+}
+[id^="tab"]:checked ~ [id^="tab-"] {
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+.table thead {
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+}
+
+.table tr {
+  display: block;
+  margin-bottom: 0.625rem;
+}
+
+.table td {
+  border-bottom: none;
+  display: block;
+  font-size: 1rem;
+  text-align: right;
+  padding: 7px 10px;
+  border: 1px solid;
+  border-bottom: none;
+}
+
+.table td::before {
+  content: attr(data-label);
+  float: left;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.table td:last-child {
+  border-bottom: 1px solid;
+}
+/* || Studios Section */
+
+#studios {
+  clear: both;
+}
+
+/* || Classes Section */
+
+/* || Contact Section */
+/* || Footer  */
+
+/* || Media Queries */
+/* Small devices */
+/* Large devices (laptops/desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+  .timetable {
+    flex-wrap: nowrap;
+  }
+
+  .timetable li {
+    width: auto;
+  }
+
+  .timetable label {
+    padding: 2rem;
+  }
+
+  .table {
+    width: 60%;
+  }
+  .table thead {
+    visibility: visible;
+    height: auto;
+    position: relative;
+  }
+
+  .table tr {
+    display: table-row;
+    margin-bottom: 0;
+  }
+
+  .table td {
+    border: 1px solid;
+    padding: 0.5rem;
+    display: table-cell;
+    text-align: left;
+    width: 30%;
+  }
+
+  .table td::before {
+    content: none;
+  }
+}
+
+/* article:nth-child(2):hover{
+  background: no-repeat top right/cover url(resources/rehabilitation.jpg);
+  color: white;
+} */
