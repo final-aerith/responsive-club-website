@@ -5,11 +5,11 @@
 }
 
 :root {
-  --purple-pilates: #524ff5;
-  --gray-pilates: #6a6a6a;
-  --beige-pilates: #f0f0f0;
-  --yellow-pilates: #f2f54f;
-  --black-pilates: #1b2129;
+  --purple-pilates: hsl(241, 89%, 64%);
+  --gray-pilates: hsl(0, 0%, 42%);
+  --beige-pilates: hsl(0, 0%, 94%);
+  --yellow-pilates: hsl(61, 89%, 64%);
+  --black-pilates: hsl(214, 21%, 13%);
 }
 
 html {
@@ -19,9 +19,10 @@ html {
 }
 
 /* || General styles */
+
 /* || Utilities */
 
-.mobile {
+.desktop {
   display: none;
 }
 /* || Typography */
@@ -275,7 +276,6 @@ button:active {
   flex-direction: column;
   align-items: center;
   background-color: var(--black-pilates);
-  /* width: 100%; */
   padding: 5rem 0;
 }
 
@@ -285,96 +285,61 @@ button:active {
 }
 
 .timetable {
-  width: 100%;
-  list-style: none;
-  position: relative;
-  color: var(--beige-pilates);
-  /* min-height: 50vh; */
-  top: 1rem;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-}
-
-.timetable li {
   width: 100%;
-  justify-content: center;
-  /* float: left; */
-  display: flex;
-  /* flex-direction: row; */
-  /* display: block; */
 }
 
-input[type="radio"] {
-  position: absolute;
-  top: 0;
-  left: -9999px;
+.tab {
+  flex-grow: 1;
+  width: 100%;
+  display: none;
+  padding: 1rem;
+  order: 99;
 }
 
-.timetable label {
+.table {
+  color: var(--beige-pilates);
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.label {
+  order: 1;
   display: block;
-  padding: 0.2rem;
-
+  width: 50%;
+  padding: 0.8rem;
   font-size: 1.3rem;
   background: var(--black-pilates);
   color: var(--beige-pilates);
   cursor: pointer;
-  /* position: relative; */
+  text-align: center;
 }
 
-.timetable label:hover {
-  color: var(--yellow-pilates);
-}
-
-.tab-content {
-  /* z-index: 2; */
-  display: none;
-  /* overflow: hidden; */
-  width: 100%;
-  font-size: 1.3rem;
-  line-height: 2rem;
-  padding: 2rem;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: var(--black-pilates);
-}
-
-[id^="tab"]:checked + label {
-  top: 0;
-  background: var(--black-pilates);
-  color: var(--yellow-pilates);
-}
-[id^="tab"]:checked ~ [id^="tab-"] {
-  display: flex;
-  justify-content: center;
-}
-
-.table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 2rem;
+.label:hover {
+  color: hsl(61, 89%, 64%, 0.8);
 }
 
 .table thead {
+  background-color: #2c323a;
   visibility: hidden;
-  height: 0;
   position: absolute;
 }
 
 .table tr {
   display: block;
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.625em;
 }
 
 .table td {
+  border: 1px solid;
+  width: 100%;
   border-bottom: none;
   display: block;
   font-size: 1rem;
+  padding: 1rem;
   text-align: right;
-  padding: 7px 10px;
-  border: 1px solid;
-  border-bottom: none;
+  border: 1px solid #50555b;
 }
 
 .table td::before {
@@ -387,61 +352,84 @@ input[type="radio"] {
 .table td:last-child {
   border-bottom: 1px solid;
 }
-/* || Studios Section */
 
-#studios {
-  clear: both;
+.timetable input[type="radio"] {
+  display: none;
 }
+.timetable input[type="radio"]:checked + label {
+  color: var(--yellow-pilates);
+}
+
+.timetable input[type="radio"]:checked + label + .tab {
+  display: flex;
+  justify-content: center;
+}
+
+.trainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: end;
+}
+
+.trainer img {
+  width: 13%;
+}
+
+/* || Studios Section */
 
 /* || Classes Section */
 
 /* || Contact Section */
+
 /* || Footer  */
 
 /* || Media Queries */
 /* Small devices */
+
 /* Large devices (laptops/desktops, 992px and up) */
 @media screen and (min-width: 992px) {
+  .mobile {
+    display: none;
+  }
+
   .timetable {
-    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .tab {
+    order: 99;
   }
 
-  .timetable li {
+  .label {
+    order: 1;
     width: auto;
-  }
-
-  .timetable label {
     padding: 2rem;
   }
 
   .table {
     width: 60%;
   }
+
   .table thead {
     visibility: visible;
-    height: auto;
     position: relative;
   }
 
   .table tr {
     display: table-row;
-    margin-bottom: 0;
   }
 
   .table td {
-    border: 1px solid;
-    padding: 0.5rem;
     display: table-cell;
     text-align: left;
     width: 30%;
   }
 
   .table td::before {
-    content: none;
+    content: "";
+  }
+
+  .table td:last-child {
+    border-bottom: 1px solid #50555b;
   }
 }
-
-/* article:nth-child(2):hover{
-  background: no-repeat top right/cover url(resources/rehabilitation.jpg);
-  color: white;
-} */
