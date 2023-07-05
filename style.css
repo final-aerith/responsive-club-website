@@ -22,9 +22,6 @@ html {
 
 /* || Utilities */
 
-.desktop {
-  display: none;
-}
 /* || Typography */
 
 h1 {
@@ -113,6 +110,11 @@ nav li {
   list-style: none;
   text-transform: uppercase;
   text-align: center;
+}
+
+.desktop-logo {
+  position: absolute;
+  visibility: hidden;
 }
 
 .nav-toggler {
@@ -389,6 +391,39 @@ button:active {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media screen and (min-width: 992px) {
+  .desktop-logo {
+    position: relative;
+    visibility: visible;
+  }
+
+  .desktop-logo .logo {
+    width: 50%;
+  }
+
+  nav {
+    all: unset;
+  }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: center;
+gap: 2rem;
+  }
+
+  header {
+    position: fixed;
+    height: auto;
+    padding: 0;
+  }
+
+  .navbar a {
+    opacity: 1;
+  }
+
+  .nav-toggler-label {
+    display: none;
+  }
+
   .mobile {
     display: none;
   }
