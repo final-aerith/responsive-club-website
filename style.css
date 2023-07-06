@@ -18,11 +18,11 @@ html {
   scroll-behavior: smooth;
 }
 
-/* || General styles */
+/* || ------------------------------ General styles */
 
-/* || Utilities */
+/* || ------------------------------ Utilities */
 
-/* || Typography */
+/* || ------------------------------ Typography */
 
 h1 {
   font-size: 2rem;
@@ -55,7 +55,7 @@ h6 {
   line-height: 1rem;
 }
 
-/* || Header and Main Navigation */
+/* || ------------------------------ Header and Main Navigation */
 header {
   background-color: white;
   padding: 1rem 0;
@@ -179,7 +179,7 @@ nav li {
   transform: rotate(135deg);
 }
 
-/* || Hero */
+/* || ------------------------------ Hero */
 
 #hero {
   height: 90vh;
@@ -196,7 +196,7 @@ nav li {
   margin: 2rem;
 }
 
-/* || About Section */
+/* || ------------------------------ About Section */
 
 #about {
   background: no-repeat top right/cover url(resources/about.png);
@@ -211,7 +211,7 @@ nav li {
 .about-div {
   background-color: var(--beige-pilates);
   margin: 2rem 0;
-  padding: 2rem 1rem 1rem;
+  padding: 1rem;
 }
 .about-div p {
   color: var(--gray-pilates);
@@ -219,9 +219,13 @@ nav li {
 }
 .about-div img {
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
-/* || Find your balance */
+
+.about-photo {
+  display: none;
+}
+/* || ------------------------------ Find your balance */
 
 .banner {
   background-color: var(--black-pilates);
@@ -231,7 +235,11 @@ nav li {
   font-size: 2rem;
 }
 
-/* || News Blog Section  */
+.banner span:nth-last-of-type(2) {
+  display: none;
+}
+
+/* || ------------------------------ News Blog Section  */
 
 #news {
   background: no-repeat top right/cover url(resources/news.png);
@@ -273,7 +281,7 @@ button:active {
   border: 1px solid var(--yellow-pilates);
 }
 
-/* || Timetable schedule Section */
+/* || ------------------------------ Timetable schedule Section */
 #timetable {
   display: flex;
   flex-direction: column;
@@ -380,29 +388,36 @@ button:active {
   width: 13%;
 }
 
-/* || Studios Section */
+/* || ------------------------------ Studios Section */
 
-/* || Classes Section */
+/* || ------------------------------ Classes Section */
 
-/* || Contact Section */
+/* || ------------------------------ Contact Section */
 
-/* || Footer  */
+/* || ------------------------------ Footer  */
 
-/* || Media Queries */
-/* Small devices */
+/* || -------------------------------------------------------------- Media Queries -------------------------------------------------------------- */
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media screen and (min-width: 992px) {
+  /* || ------------------------------ Utilities */
+
+  .mobile {
+    display: none;
+  }
+
+  /* || ------------------------------ Typography */
+
   h1 {
     font-size: 5rem;
     line-height: 6rem;
   }
-  /*   
+
   h2 {
-    font-size: 2rem;
-    line-height: 3rem;
+    font-size: 4rem;
+    line-height: 5rem;
   }
-  
+  /* 
   h3 {
     font-size: 1.5rem;
   }
@@ -417,6 +432,13 @@ button:active {
     font-size: 1rem;
     line-height: 1rem;
   } */
+
+  p {
+    font-size: 1.2rem;
+    color: var(--gray-pilates);
+  }
+
+  /* || ------------------------------ Header and Main Navigation */
 
   .desktop-logo {
     position: relative;
@@ -451,13 +473,129 @@ button:active {
     display: none;
   }
 
-  .hero-content p{
-    font-size: 2rem ;
+  /* || ------------------------------ Hero */
+
+  .hero-content p {
+    font-size: 2rem;
+    color: white;
   }
 
-  .mobile {
-    display: none;
+  /* || ------------------------------ About Section */
+
+  #about {
+    background-size: 40%;
   }
+
+  .about-content {
+    padding: 5rem 10rem;
+  }
+
+  .about-pilates {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-areas:
+      "about1 about1 aboutphoto"
+      "about2 about2 aboutphoto"
+      "about3 about3 aboutphoto";
+    gap: 1rem;
+    padding: 2rem 0;
+  }
+
+  .about-div:first-of-type {
+    grid-area: about1;
+  }
+
+  .about-div:nth-of-type(2) {
+    grid-area: about2;
+  }
+  .about-div:nth-of-type(3) {
+    grid-area: about3;
+  }
+
+  .about-photo {
+    display: block;
+    grid-area: aboutphoto;
+  }
+
+  .about-div {
+    display: flex;
+    margin: 0;
+    justify-content: space-evenly;
+  }
+
+  .about-div div {
+    width: 60%;
+    padding: 1rem 4.5rem 1rem 1.5rem;
+  }
+
+  .about-div img {
+    width: 30%;
+    margin-top: 0;
+  }
+
+  .about-div:nth-of-type(2) div {
+    order: 2;
+  }
+
+  /* || ------------------------------ Find your balance */
+
+  .banner {
+    clear: both;
+    display: flex;
+    justify-content: space-evenly;
+    /* color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem; */
+  }
+
+  .banner span:nth-last-of-type(2) {
+    display: inline;
+    color: var(--gray-pilates);
+  }
+
+  /* || ------------------------------ News Blog Section  */
+
+  #news {
+    background-size: 40%;
+  }
+
+  .news-content {
+    padding: 5rem 10rem;
+    width: 70%;
+  }
+  /*
+article {
+  background-color: var(--beige-pilates);
+  margin: 2rem 0;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+article button {
+  padding: 1rem;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: var(--black-pilates);
+  font-size: 1rem;
+  border: 1px solid #bababa;
+  background-color: var(--beige-pilates);
+}
+
+article button:hover,
+button:focus,
+button:active {
+  background-color: var(--yellow-pilates);
+  border: 1px solid var(--yellow-pilates);
+}
+
+ */
 
   .timetable {
     justify-content: center;
