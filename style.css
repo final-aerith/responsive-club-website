@@ -55,6 +55,10 @@ h6 {
   line-height: 1rem;
 }
 
+p {
+  color: var(--gray-pilates);
+}
+
 /* || ------------------------------ Header and Main Navigation */
 header {
   background-color: white;
@@ -196,6 +200,10 @@ nav li {
   margin: 2rem;
 }
 
+.hero-content p {
+  color: white;
+}
+
 /* || ------------------------------ About Section */
 
 #about {
@@ -220,6 +228,7 @@ nav li {
 .about-div img {
   width: 100%;
   margin-top: 2rem;
+  height: auto;
 }
 
 .about-photo {
@@ -245,9 +254,6 @@ nav li {
   background: no-repeat top right/cover url(resources/news.png);
   background-size: 70%;
   margin-top: 1rem;
-}
-
-.news-content {
   padding: 2rem;
 }
 
@@ -286,8 +292,10 @@ button:active {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 3rem 0;
+  background: no-repeat top right/cover url(resources/timetable.png);
   background-color: var(--black-pilates);
-  padding: 5rem 0;
+  background-size: 100%;
 }
 
 #timetable h3,
@@ -386,9 +394,77 @@ button:active {
 
 .trainer img {
   width: 13%;
+  height: auto;
 }
 
 /* || ------------------------------ Studios Section */
+
+#studios {
+  background: no-repeat top right/cover url(resources/studios.png);
+  background-size: 80%;
+  margin-bottom: 5rem;
+  padding-top: 3rem;
+  text-align: center;
+}
+
+.studios {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.studio {
+  display: flex;
+  margin: 0 2rem;
+}
+
+.studio a {
+  color: var(--beige-pilates);
+}
+
+.studio-info {
+  background-color: var(--black-pilates);
+  align-self: flex-end;
+  margin-top: 15rem;
+  padding: 1rem;
+  text-align: left;
+  width: 100%;
+}
+
+.new-city {
+  background: no-repeat top right/cover url(resources/new-city.png);
+}
+.square-tree {
+  background: no-repeat top right/cover url(resources/square-tree.png);
+}
+.second-avenue {
+  background: no-repeat top right/cover url(resources/second-avenue.png);
+}
+
+.studio p {
+  color: var(--beige-pilates);
+  line-height: 2;
+}
+
+.studio span {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--beige-pilates);
+  border-bottom: 1px solid var(--gray-pilates);
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+
+.studio-info p:last-of-type {
+  color: var(--gray-pilates);
+}
+
+.free-class {
+  text-align: left;
+  margin: 2rem;
+}
 
 /* || ------------------------------ Classes Section */
 
@@ -398,8 +474,23 @@ button:active {
 
 /* || -------------------------------------------------------------- Media Queries -------------------------------------------------------------- */
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media screen and (min-width: 992px) {
+/* Mobile */
+
+@media screen and (max-width: 480px) {
+}
+
+/* Tablet */
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+}
+
+/* Tablet Landscape */
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+}
+
+/* Large devices (laptops/desktops) */
+@media screen and (min-width: 1025px) {
   /* || ------------------------------ Utilities */
 
   .mobile {
@@ -417,6 +508,7 @@ button:active {
     font-size: 4rem;
     line-height: 5rem;
   }
+
   /* 
   h3 {
     font-size: 1.5rem;
@@ -435,7 +527,6 @@ button:active {
 
   p {
     font-size: 1.2rem;
-    color: var(--gray-pilates);
   }
 
   /* || ------------------------------ Header and Main Navigation */
@@ -477,7 +568,6 @@ button:active {
 
   .hero-content p {
     font-size: 2rem;
-    color: white;
   }
 
   /* || ------------------------------ About Section */
@@ -492,13 +582,14 @@ button:active {
 
   .about-pilates {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
     grid-template-areas:
       "about1 about1 aboutphoto"
       "about2 about2 aboutphoto"
       "about3 about3 aboutphoto";
-    gap: 1rem;
-    padding: 2rem 0;
+    row-gap: 1rem;
+    column-gap: 2rem;
+    padding: 3rem 0;
   }
 
   .about-div:first-of-type {
@@ -515,6 +606,7 @@ button:active {
   .about-photo {
     display: block;
     grid-area: aboutphoto;
+    background: no-repeat top left/cover url(resources/pilates-experience.png);
   }
 
   .about-div {
@@ -543,10 +635,6 @@ button:active {
     clear: both;
     display: flex;
     justify-content: space-evenly;
-    /* color: white;
-    padding: 1rem;
-    text-align: center;
-    font-size: 2rem; */
   }
 
   .banner span:nth-last-of-type(2) {
@@ -599,28 +687,13 @@ button:active {
   article:hover h6 {
     color: white;
   }
-  /*
-article button {
-  padding: 1rem;
-  font-family: "Lato", sans-serif;
-  cursor: pointer;
-  text-align: center;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  color: var(--black-pilates);
-  font-size: 1rem;
-  border: 1px solid #bababa;
-  background-color: var(--beige-pilates);
-}
 
-article button:hover,
-button:focus,
-button:active {
-  background-color: var(--yellow-pilates);
-  border: 1px solid var(--yellow-pilates);
-}
+  /* || ------------------------------ Timetable schedule Section */
 
- */
+  #timetable {
+    background-size: 70%;
+    padding: 10rem 0;
+  }
 
   .timetable {
     justify-content: center;
@@ -665,4 +738,35 @@ button:active {
   .table td:last-child {
     border-bottom: 1px solid #50555b;
   }
+
+  /* || ------------------------------ Studios Section */
+
+
+  #studios {
+    background-size: 40%;
+    padding-top: 8rem;
+  }
+  
+  .studios {
+    flex-direction: row;
+  }
+  
+  .studio {
+    margin: 0;
+  }
+ 
+  .studio-info {
+    margin-top: 30rem;
+    padding: 0 6rem 1rem;
+
+  }
+  
+  .free-class {
+    margin: 1rem 18rem;
+  }
+  /* || ------------------------------ Classes Section */
+
+  /* || ------------------------------ Contact Section */
+
+  /* || ------------------------------ Footer  */
 }
