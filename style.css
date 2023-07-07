@@ -468,6 +468,53 @@ button:active {
 
 /* || ------------------------------ Classes Section */
 
+.class {
+  background-color: var(--purple-pilates);
+  color: var(--beige-pilates);
+  display: flex;
+  /* padding: 5rem; */
+  padding: 5rem 2rem;
+  /* justify-content: space-evenly; */
+  /* align-items: center; */
+  flex-direction: column;
+  /* flex-direction: row; */
+}
+
+.class h4, 
+.class p{
+  color: var(--beige-pilates);
+}
+
+.signature-class-info{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.classes-info h6{
+background-color: var(--black-pilates);
+display: inline-block;
+color: var(--beige-pilates);
+padding: 1rem;
+margin: 1rem 0;
+}
+
+.classes-info div{
+  border-top: 1px var(--beige-pilates) solid;
+  margin: 1rem 0;
+}
+
+.class-info:last-child{
+  border-bottom: 1px red solid;
+  background-color: red;
+
+}
+.class-image{
+  display: none;
+}
+
+
+
 /* || ------------------------------ Contact Section */
 
 /* || ------------------------------ Footer  */
@@ -766,6 +813,24 @@ button:active {
   }
   /* || ------------------------------ Classes Section */
 
+  .class {
+    padding: 5rem;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+  }
+   
+  .class-image{
+    background-image: url(resources/class.png);
+    display: block;
+    position: relative;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    bottom: 21rem;
+    height: 16rem;
+    width: 90%;
+  }
+  
   /* || ------------------------------ Contact Section */
 
   /* || ------------------------------ Footer  */
