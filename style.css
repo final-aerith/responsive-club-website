@@ -10,6 +10,7 @@
   --beige-pilates: hsl(0, 0%, 94%);
   --yellow-pilates: hsl(61, 89%, 64%);
   --black-pilates: hsl(214, 21%, 13%);
+  --light-gray-pilates: hsl(0, 0%, 98%);
 }
 
 html {
@@ -20,7 +21,77 @@ html {
 
 /* || ------------------------------ General styles */
 
+button,
+input,
+textarea {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid #d3d3d3;
+  border-radius: 0.25rem;
+  height: 2rem;
+}
+
+textarea {
+  min-height: 5rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1; /* Firefox */
+  color: var(--gray-pilates);
+  font-size: 0.8rem;
+}
+label {
+  padding: 0.5rem 0;
+}
+
+button {
+  padding: 1rem;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: var(--black-pilates);
+  font-size: 1rem;
+  border: 1px solid #bababa;
+  background-color: var(--beige-pilates);
+}
+
+button:hover,
+button:focus,
+button:active {
+  background-color: var(--yellow-pilates);
+  border: 1px solid var(--yellow-pilates);
+}
+
+.send-button {
+  background-color: black;
+  color: white;
+  border: black;
+}
+
+.send-button:hover {
+  color: black;
+}
 /* || ------------------------------ Utilities */
+
+.purple {
+  color: var(--purple-pilates);
+}
 
 /* || ------------------------------ Typography */
 
@@ -267,26 +338,6 @@ article {
   cursor: pointer;
 }
 
-article button {
-  padding: 1rem;
-  font-family: "Lato", sans-serif;
-  cursor: pointer;
-  text-align: center;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  color: var(--black-pilates);
-  font-size: 1rem;
-  border: 1px solid #bababa;
-  background-color: var(--beige-pilates);
-}
-
-article button:hover,
-button:focus,
-button:active {
-  background-color: var(--yellow-pilates);
-  border: 1px solid var(--yellow-pilates);
-}
-
 /* || ------------------------------ Timetable schedule Section */
 #timetable {
   display: flex;
@@ -480,42 +531,114 @@ button:active {
   /* flex-direction: row; */
 }
 
-.class h4, 
-.class p{
+.class h4,
+.class p {
   color: var(--beige-pilates);
 }
 
-.signature-class-info{
+.signature-class-info {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.classes-info h6{
-background-color: var(--black-pilates);
-display: inline-block;
-color: var(--beige-pilates);
-padding: 1rem;
-margin: 1rem 0;
+.classes-info h6 {
+  background-color: var(--black-pilates);
+  display: inline-block;
+  color: var(--beige-pilates);
+  padding: 1rem;
+  margin: 1rem 0;
 }
 
-.classes-info div{
+.classes-info div {
   border-top: 1px var(--beige-pilates) solid;
   margin: 1rem 0;
 }
 
-.class-info:last-child{
+.class-info:last-child {
   border-bottom: 1px red solid;
   background-color: red;
-
 }
-.class-image{
+.class-image {
   display: none;
 }
 
-
-
 /* || ------------------------------ Contact Section */
+
+#contact {
+  background: url(resources/contact.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.open-hours {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: fit-content;
+}
+
+.open-hours::before {
+  content: " ";
+  display: block;
+  border-top: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
+  border-radius: 2px;
+}
+
+.open-hours p {
+  display: inline-block;
+}
+
+.open-hours strong {
+  color: black;
+}
+
+.contact-form {
+  background-color: var(--light-gray-pilates);
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.contact-form p{
+  font-size: 1rem;
+}
+
+form {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  color: var(--gray-pilates);
+  margin-top: 2rem;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-buttons {
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.form-buttons button{
+  width: 100%;
+}
 
 /* || ------------------------------ Footer  */
 
@@ -788,26 +911,24 @@ margin: 1rem 0;
 
   /* || ------------------------------ Studios Section */
 
-
   #studios {
     background-size: 40%;
     padding-top: 8rem;
   }
-  
+
   .studios {
     flex-direction: row;
   }
-  
+
   .studio {
     margin: 0;
   }
- 
+
   .studio-info {
     margin-top: 30rem;
     padding: 0 6rem 1rem;
-
   }
-  
+
   .free-class {
     margin: 1rem 18rem;
   }
@@ -819,8 +940,8 @@ margin: 1rem 0;
     align-items: center;
     flex-direction: row;
   }
-   
-  .class-image{
+
+  .class-image {
     background-image: url(resources/class.png);
     display: block;
     position: relative;
@@ -830,8 +951,21 @@ margin: 1rem 0;
     height: 16rem;
     width: 90%;
   }
-  
+
   /* || ------------------------------ Contact Section */
+
+
+#contact {
+flex-direction: row;
+background-size: 60%;
+padding: 5rem;
+gap: 5rem;
+}
+
+.contact-info, 
+.contact-form {
+  width: 50%;
+}
 
   /* || ------------------------------ Footer  */
 }
