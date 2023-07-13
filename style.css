@@ -93,6 +93,10 @@ button:active {
   color: var(--purple-pilates);
 }
 
+.yellow {
+  color: var(--yellow-pilates);
+}
+
 /* || ------------------------------ Typography */
 
 h1 {
@@ -326,6 +330,10 @@ nav li {
   background-size: 70%;
   margin-top: 1rem;
   padding: 2rem;
+}
+
+#news h2{
+  text-align: center;
 }
 
 article {
@@ -583,6 +591,9 @@ article {
   gap: 1rem;
 }
 
+.contact-info h2{
+margin-bottom: 2rem;}
+
 .open-hours {
   display: flex;
   flex-direction: column;
@@ -612,7 +623,7 @@ article {
   gap: 1rem;
 }
 
-.contact-form p{
+.contact-form p {
   font-size: 1rem;
 }
 
@@ -636,11 +647,82 @@ form div {
   gap: 1rem;
 }
 
-.form-buttons button{
+.form-buttons button {
   width: 100%;
 }
 
 /* || ------------------------------ Footer  */
+
+footer {
+  background-color: var(--black-pilates);
+  margin: 2rem;
+  padding: 2rem;
+}
+
+footer a {
+  color: var(--beige-pilates);
+}
+
+.footer-logo {
+  fill: white;
+  margin-bottom: 1rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 2rem 0;
+  align-items: flex-start;
+}
+
+.footer-info {
+  width: 100%;
+  background-color: #242a32;
+  border: 1px solid #485059;
+  margin-top: 1rem;
+  line-height: 2rem;
+  padding: 2rem;
+}
+
+.footer-newsletter {
+  display: flex;
+  flex-direction: column;
+  color: var(--beige-pilates);
+  gap: 1rem;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.footer-newsletter button {
+  background-color: var(--yellow-pilates);
+  color: var(--black-pilates);
+  border: none;
+}
+
+.footer-newsletter button:hover {
+  background-color: var(--beige-pilates);
+}
+
+.footer-newsletter span {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--light-gray-pilates);
+  font-weight: 600;
+}
+
+.social-media {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.version {
+  text-align: center;
+  color: var(--gray-pilates);
+  margin: 2rem;
+}
 
 /* || -------------------------------------------------------------- Media Queries -------------------------------------------------------------- */
 
@@ -678,22 +760,6 @@ form div {
     font-size: 4rem;
     line-height: 5rem;
   }
-
-  /* 
-  h3 {
-    font-size: 1.5rem;
-  }
-  
-  h4 {
-    font-size: 1rem;
-    line-height: 1rem;
-    letter-spacing: 4px;
-  }
-  
-  h6 {
-    font-size: 1rem;
-    line-height: 1rem;
-  } */
 
   p {
     font-size: 1.2rem;
@@ -954,18 +1020,45 @@ form div {
 
   /* || ------------------------------ Contact Section */
 
+  #contact {
+    flex-direction: row;
+    background-size: 60%;
+    padding: 5rem;
+    gap: 5rem;
+  }
 
-#contact {
-flex-direction: row;
-background-size: 60%;
-padding: 5rem;
-gap: 5rem;
-}
-
-.contact-info, 
-.contact-form {
-  width: 50%;
-}
+  .contact-info,
+  .contact-form {
+    width: 50%;
+  }
 
   /* || ------------------------------ Footer  */
+
+  footer {
+    padding: 5rem;
+  }
+
+  .footer-content {
+    flex-direction: row;
+  }
+
+  .footer-info {
+    width: fit-content;
+    padding: 2rem 10rem 2rem 2rem;
+  }
+
+  .footer-newsletter {
+    margin: -5rem 5rem 0 0;
+    width: 25%;
+  }
+
+  .footer-newsletter span {
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+  }
+
+  .social-media {
+    margin-right: 5rem;
+    align-/items: flex-start;
+  }
 }
