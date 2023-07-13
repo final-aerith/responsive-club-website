@@ -1060,6 +1060,6 @@ footer a {
 
   .social-media {
     margin-right: 5rem;
-    align-items: flex-start;
+    justify-content: flex-end;
   }
 }
