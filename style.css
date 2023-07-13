@@ -63,6 +63,7 @@ button {
   font-family: "Lato", sans-serif;
   cursor: pointer;
   text-align: center;
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   color: var(--black-pilates);
@@ -1059,6 +1060,6 @@ footer a {
 
   .social-media {
     margin-right: 5rem;
-    align-/items: flex-start;
+    align-items: flex-start;
   }
 }
