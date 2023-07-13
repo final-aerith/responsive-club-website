@@ -11,3 +11,4 @@ In this project, I'll be building my own club group page that will dynamically r
 
 Thanks for checking it out.
 
+![pilates-responsive-web](https://github.com/final-aerith/responsive-club-website/assets/62681407/73269865-ad9c-4255-9155-1a8f25e044e0)
