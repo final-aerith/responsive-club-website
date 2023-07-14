@@ -695,6 +695,10 @@ footer a {
   width: 100%;
 }
 
+.footer-newsletter input{
+  color: var(--beige-pilates)
+}
+
 .footer-newsletter button {
   background-color: var(--yellow-pilates);
   color: var(--black-pilates);
